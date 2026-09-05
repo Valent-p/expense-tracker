@@ -4,6 +4,8 @@
 
 A simple expense tracker API built with FastAPI and SQLite for recording and viewing today's expenses.
 
+![ExpenseTracker](/screenshots/image.png)
+
 ## Features
 
 - Add expenses with amount, category, and description
