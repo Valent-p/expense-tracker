@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2387CEEB' d='M12 7V3L4 12h3v9h4v-6h2v6h4v-9h3l-8-9z'/></svg>">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="material-icons">account_balance_wallet</span>
+      <h1>Expense Tracker</h1>
+    </div>
+
+    <div class="date-bar">
+      <span class="material-icons">calendar_today</span>
+      <span id="today-date"></span>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="material-icons">add_circle</span> Add Expense</h2>
+      <form id="expense-form">
+        <div class="form-row">
+          <input type="number" id="amount" placeholder="Amount ($)" step="0.01" required />
+          <input type="text" id="category" placeholder="Category (e.g. Food)" required />
+        </div>
+        <input type="text" id="description" placeholder="Description (optional)" />
+        <button type="submit" class="btn btn-primary">
+          <span class="material-icons">save</span> Save Expense
+        </button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="material-icons">receipt_long</span> Today's Summary</h2>
+      <div id="summary">
+        <p class="loading">Loading...</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="material-icons">list</span> Today's Expenses</h2>
+      <ul id="expenses-list">
+        <p class="loading">No expenses yet.</p>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
